@@ -26,27 +26,6 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
 
         val bottomNavView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        setupWithNavController(bottomNavView, navController)
-        bottomNavView.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.homeFragment -> {
-                    navController.navigate(R.id.homeFragment)
-                    true
-                }
-                R.id.shopFragment -> {
-                    navController.navigate(R.id.shopFragment)
-                    true
-                }
-                R.id.favouritesFragment -> {
-                    navController.navigate(R.id.favouritesFragment)
-                    true
-                }
-                R.id.profileFragment -> {
-                    navController.navigate(R.id.profileFragment)
-                    true
-                }
-                else -> false
-            }
-        }
+         setupWithNavController(bottomNavView, navController)
     }
 }
